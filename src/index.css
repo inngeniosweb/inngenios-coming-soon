@@ -146,42 +146,81 @@
   }
 }
 
-@keyframes gearFloat {
-  0%, 100% {
-    transform: translateY(0px);
+/* Professional Gear Animations */
+@keyframes gearFloatSmooth {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px); 
   }
-  50% {
-    transform: translateY(-10px);
+  25% { 
+    transform: translateY(-3px) translateX(1px); 
   }
-}
-
-@keyframes gearFloatReverse {
-  0%, 100% {
-    transform: translateY(0px);
+  50% { 
+    transform: translateY(-6px) translateX(0px); 
   }
-  50% {
-    transform: translateY(8px);
+  75% { 
+    transform: translateY(-3px) translateX(-1px); 
   }
 }
 
-@keyframes gearPulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.6;
+@keyframes gearFloatSmoothReverse {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px); 
   }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.9;
+  25% { 
+    transform: translateY(3px) translateX(-1px); 
+  }
+  50% { 
+    transform: translateY(6px) translateX(0px); 
+  }
+  75% { 
+    transform: translateY(3px) translateX(1px); 
   }
 }
 
-@keyframes gearGlow {
-  0%, 100% {
-    filter: drop-shadow(0 0 5px rgba(232, 85, 26, 0.3));
+@keyframes gearPulseSubtle {
+  0%, 100% { 
+    opacity: 0.8; 
+    transform: scale(1); 
   }
-  50% {
-    filter: drop-shadow(0 0 20px rgba(232, 85, 26, 0.6));
+  50% { 
+    opacity: 1; 
+    transform: scale(1.02); 
   }
+}
+
+@keyframes gearGlowEnhanced {
+  0%, 100% { 
+    filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.4)); 
+  }
+  50% { 
+    filter: drop-shadow(0 0 16px hsl(var(--primary) / 0.7)); 
+  }
+}
+
+@keyframes connectionPulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes energyPulse {
+  0%, 100% { 
+    opacity: 0.4; 
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.5); 
+  }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinReverseSlow {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 
 @keyframes pulseGlow {
@@ -213,28 +252,84 @@
 }
 
 
+/* Professional Animation Classes */
 .gear-rotate {
-  animation: gearRotate 12s linear infinite;
+  animation: gearRotate 15s linear infinite;
 }
 
 .gear-rotate-reverse {
-  animation: gearRotateReverse 10s linear infinite;
+  animation: gearRotateReverse 18s linear infinite;
 }
 
-.gear-float {
-  animation: gearFloat 8s ease-in-out infinite;
+.gear-rotate-slow {
+  animation: gearRotate 25s linear infinite;
 }
 
-.gear-float-reverse {
-  animation: gearFloatReverse 6s ease-in-out infinite;
+.gear-rotate-reverse-slow {
+  animation: gearRotateReverse 30s linear infinite;
 }
 
-.gear-pulse {
-  animation: gearPulse 4s ease-in-out infinite;
+.gear-float-smooth {
+  animation: gearFloatSmooth 12s ease-in-out infinite;
 }
 
-.gear-glow {
-  animation: gearGlow 5s ease-in-out infinite;
+.gear-float-smooth-reverse {
+  animation: gearFloatSmoothReverse 14s ease-in-out infinite;
+}
+
+.gear-pulse-subtle {
+  animation: gearPulseSubtle 8s ease-in-out infinite;
+}
+
+.gear-pulse-subtle-delay {
+  animation: gearPulseSubtle 8s ease-in-out 2s infinite;
+}
+
+.gear-glow-enhanced {
+  animation: gearGlowEnhanced 6s ease-in-out infinite;
+}
+
+.connection-pulse {
+  animation: connectionPulse 4s ease-in-out infinite;
+}
+
+.connection-pulse-delay {
+  animation: connectionPulse 4s ease-in-out 1s infinite;
+}
+
+.connection-pulse-delay-2 {
+  animation: connectionPulse 4s ease-in-out 2s infinite;
+}
+
+.energy-pulse {
+  animation: energyPulse 3s ease-in-out infinite;
+}
+
+.energy-pulse-delay {
+  animation: energyPulse 3s ease-in-out 1s infinite;
+}
+
+.energy-pulse-delay-2 {
+  animation: energyPulse 3s ease-in-out 2s infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinReverseSlow 22s linear infinite;
+}
+
+/* Background Pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(circle, hsl(var(--primary) / 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Gradient Utilities */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
 }
 
 .pulse-glow {

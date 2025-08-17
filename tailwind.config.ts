@@ -61,7 +61,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Inngenios brand colors
+				brand: {
+					'orange-dark': 'hsl(var(--brand-orange-dark))',
+					'red': 'hsl(var(--brand-red))',
+					'green': 'hsl(var(--brand-green))',
+					'purple': 'hsl(var(--brand-purple))'
 				}
+			},
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+				'moontime': ['MoonTime Regular', 'cursive'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

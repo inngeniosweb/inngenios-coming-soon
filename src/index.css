@@ -146,14 +146,56 @@
   }
 }
 
+@keyframes gearFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+  }
+}
+
+@keyframes gearFloatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(360deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(180deg);
+  }
+}
+
+@keyframes gearPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes gearGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(232, 85, 26, 0.3));
+    transform: rotate(0deg);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(232, 85, 26, 0.6));
+    transform: rotate(180deg);
+  }
+}
+
 @keyframes pulseGlow {
   0%, 100% {
-    opacity: 0.8;
+    opacity: 0.9;
     transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(232, 85, 26, 0.3));
   }
   50% {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 25px rgba(232, 85, 26, 0.5));
   }
 }
 
@@ -172,14 +214,31 @@
   opacity: 0;
 }
 
+
 .gear-rotate {
-  animation: gearRotate 8s linear infinite;
+  animation: gearRotate 12s linear infinite;
 }
 
 .gear-rotate-reverse {
-  animation: gearRotateReverse 6s linear infinite;
+  animation: gearRotateReverse 10s linear infinite;
+}
+
+.gear-float {
+  animation: gearFloat 8s ease-in-out infinite;
+}
+
+.gear-float-reverse {
+  animation: gearFloatReverse 6s ease-in-out infinite;
+}
+
+.gear-pulse {
+  animation: gearPulse 4s ease-in-out infinite;
+}
+
+.gear-glow {
+  animation: gearGlow 5s ease-in-out infinite;
 }
 
 .pulse-glow {
-  animation: pulseGlow 3s ease-in-out infinite;
+  animation: pulseGlow 4s ease-in-out infinite;
 }

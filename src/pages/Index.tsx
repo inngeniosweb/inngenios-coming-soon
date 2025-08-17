@@ -8,9 +8,9 @@ const Index = () => {
         {/* Logo */}
         <div className="fade-in-up">
           <img 
-            src="/lovable-uploads/007af8a7-35d5-46fe-85de-69c3f0db4d2e.png" 
+            src="/lovable-uploads/ec858bde-3248-4d87-a98f-914094ba30cc.png" 
             alt="Inngenios Logo" 
-            className="h-16 md:h-20 mx-auto pulse-glow"
+            className="h-20 md:h-24 lg:h-28 mx-auto pulse-glow"
           />
         </div>
         

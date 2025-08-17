@@ -148,29 +148,29 @@
 
 @keyframes gearFloat {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px) rotate(180deg);
+    transform: translateY(-10px);
   }
 }
 
 @keyframes gearFloatReverse {
   0%, 100% {
-    transform: translateY(0px) rotate(360deg);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(8px) rotate(180deg);
+    transform: translateY(8px);
   }
 }
 
 @keyframes gearPulse {
   0%, 100% {
-    transform: scale(1) rotate(0deg);
+    transform: scale(1);
     opacity: 0.6;
   }
   50% {
-    transform: scale(1.1) rotate(180deg);
+    transform: scale(1.1);
     opacity: 0.9;
   }
 }
@@ -178,11 +178,9 @@
 @keyframes gearGlow {
   0%, 100% {
     filter: drop-shadow(0 0 5px rgba(232, 85, 26, 0.3));
-    transform: rotate(0deg);
   }
   50% {
     filter: drop-shadow(0 0 20px rgba(232, 85, 26, 0.6));
-    transform: rotate(180deg);
   }
 }
 

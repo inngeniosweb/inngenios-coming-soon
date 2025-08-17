@@ -8,25 +8,27 @@ export const GearsAnimation = () => {
       
       {/* Main central gear - Large, primary color with glow */}
       <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-        <Cog 
-          size={80} 
-          className="text-primary gear-glow"
-        />
+        <div className="gear-glow">
+          <Cog 
+            size={80} 
+            className="text-primary gear-rotate"
+          />
+        </div>
       </div>
       
       {/* Secondary gear - Medium, floating animation */}
-      <div className="absolute left-1/4 top-1/3 transform -translate-x-1/2 -translate-y-1/2 z-20">
+      <div className="absolute left-1/4 top-1/3 transform -translate-x-1/2 -translate-y-1/2 z-20 gear-float">
         <Settings 
           size={56} 
-          className="text-secondary/80 gear-float"
+          className="text-secondary/80 gear-rotate-reverse"
         />
       </div>
       
       {/* Tertiary gear - Right side with pulse */}
-      <div className="absolute right-1/4 top-2/3 transform translate-x-1/2 -translate-y-1/2 z-15">
+      <div className="absolute right-1/4 top-2/3 transform translate-x-1/2 -translate-y-1/2 z-15 gear-pulse">
         <Cog 
           size={64} 
-          className="text-accent/70 gear-pulse"
+          className="text-accent/70 gear-rotate"
         />
       </div>
       
@@ -38,10 +40,10 @@ export const GearsAnimation = () => {
         />
       </div>
       
-      <div className="absolute right-1/6 top-1/4 transform translate-x-1/2 -translate-y-1/2">
+      <div className="absolute right-1/6 top-1/4 transform translate-x-1/2 -translate-y-1/2 gear-float-reverse">
         <Zap 
           size={36} 
-          className="text-brand-purple/50 gear-float-reverse"
+          className="text-brand-purple/50 gear-rotate"
         />
       </div>
       
@@ -61,10 +63,10 @@ export const GearsAnimation = () => {
       </div>
       
       {/* Background subtle gears */}
-      <div className="absolute right-1/3 bottom-1/6 transform translate-x-1/2 translate-y-1/2 opacity-30">
+      <div className="absolute right-1/3 bottom-1/6 transform translate-x-1/2 translate-y-1/2 opacity-30 gear-pulse">
         <Cog 
           size={24} 
-          className="text-brand-red/30 gear-pulse"
+          className="text-brand-red/30 gear-rotate"
         />
       </div>
       
